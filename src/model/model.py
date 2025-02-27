@@ -81,9 +81,10 @@ class LeNet(nn.Module):
         
     def forward(self, x):
         x = self.features(x)
+        proto = x
         x = x.view(-1, 16 * 5 * 5)
         x = self.classifier(x)
-        return x
+        return x, proto
 
 class LeNet_5(nn.Module):
     
@@ -114,9 +115,10 @@ class LeNet_5(nn.Module):
         
     def forward(self, x):
         x = self.conv_block(x)
+        proto = x
         x = torch.flatten(x,1)
         x = self.linear_block(x)
-        return x
+        return x, proto
     
 # ------------------------RESNET------------------------
 
@@ -208,9 +210,10 @@ class ResNet(nn.Module):
         out = self.layer2(out)
         out = self.layer3(out)
         out = F.avg_pool2d(out, out.size()[3])
+        proto = out
         out = out.view(out.size(0), -1)
         out = self.linear(out)
-        return out
+        return out, proto
 
 
 def resnet20(num_classes=100):

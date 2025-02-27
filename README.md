@@ -12,15 +12,29 @@
 [Install model](/src/MODEL.md)
 
 
+### Enviroment
+```bash
+D:
+
+cd D:\2024\FIL 2024\luan\Scripts
+
+activate
+
+cd D:\2025\Projects\self_supervisedlearning\lstm
+
+cls
+
+```
 
 ### Running
 CML normal
 ```python
-python main.py --dataset cifar100 --num_classes 100 --model LeNet --epochs 10 --batch_size 64 --lr 0.005 --optimizer sgd --device cuda
+python main.py --dataset cifar10 --num_classes 10 --model LeNet --epochs 10 --batch_size 64 --lr 0.005 --optimizer sgd --device cuda
 ```
 Semi-Supervised Learning
 1. Pseudo Label
 ```python
-python main_pseudo_label.py --dataset cifar100 --num_classes 100 --model LeNet --epochs 10 --batch_size 64 --lr 0.005 --optimizer sgd --device cuda
+python main_pseudo_label.py --dataset cifar10 --num_classes 10 --model LeNet --epochs 1 --batch_size 64 --lr 0.005 --optimizer sgd --device cuda
 ```
 "# semi-supervised-learning" 
+

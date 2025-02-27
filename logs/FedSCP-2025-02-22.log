@@ -1,0 +1,528 @@
+
+python main.py --dataset cifar10 --num_classes 10 --model LeNet --epoch
+s 50 --batch_size 64 --lr 0.005 --optimizer sgd --device cuda
+
+Epoch [1] | Loss: 2.0081 | Accuracy: 26.27% (main.py:63)
+
+Epoch [2] | Loss: 1.6934 | Accuracy: 39.08% (main.py:63)
+
+Epoch [3] | Loss: 1.5902 | Accuracy: 42.98% (main.py:63)
+
+Epoch [4] | Loss: 1.5317 | Accuracy: 45.25% (main.py:63)
+
+Epoch [5] | Loss: 1.4945 | Accuracy: 46.47% (main.py:63)
+
+Epoch [6] | Loss: 1.4551 | Accuracy: 48.14% (main.py:63)
+
+Epoch [7] | Loss: 1.4370 | Accuracy: 48.78% (main.py:63)
+
+Epoch [8] | Loss: 1.4125 | Accuracy: 49.91% (main.py:63)
+
+Epoch [9] | Loss: 1.3917 | Accuracy: 50.56% (main.py:63)
+
+Epoch [10] | Loss: 1.3744 | Accuracy: 51.23% (main.py:63)
+
+Epoch [11] | Loss: 1.3601 | Accuracy: 51.77% (main.py:63)
+
+Epoch [12] | Loss: 1.3375 | Accuracy: 52.71% (main.py:63)
+
+Epoch [13] | Loss: 1.3243 | Accuracy: 52.99% (main.py:63)
+
+Epoch [14] | Loss: 1.3117 | Accuracy: 53.31% (main.py:63)
+
+Epoch [15] | Loss: 1.3055 | Accuracy: 53.97% (main.py:63)
+
+Epoch [16] | Loss: 1.2938 | Accuracy: 54.28% (main.py:63)
+
+Epoch [17] | Loss: 1.2764 | Accuracy: 54.92% (main.py:63)
+
+Epoch [18] | Loss: 1.2789 | Accuracy: 54.71% (main.py:63)
+
+Epoch [19] | Loss: 1.2624 | Accuracy: 55.23% (main.py:63)
+
+Epoch [20] | Loss: 1.2622 | Accuracy: 55.37% (main.py:63)
+
+Epoch [21] | Loss: 1.2505 | Accuracy: 56.07% (main.py:63)
+
+Epoch [22] | Loss: 1.2430 | Accuracy: 56.23% (main.py:63)
+
+Epoch [23] | Loss: 1.2328 | Accuracy: 56.51% (main.py:63)
+
+Epoch [24] | Loss: 1.2301 | Accuracy: 56.65% (main.py:63)
+
+Epoch [25] | Loss: 1.2265 | Accuracy: 56.74% (main.py:63)
+
+Epoch [26] | Loss: 1.2240 | Accuracy: 56.75% (main.py:63)
+
+Epoch [27] | Loss: 1.2151 | Accuracy: 57.22% (main.py:63)
+
+Epoch [28] | Loss: 1.2158 | Accuracy: 57.08% (main.py:63)
+
+Epoch [29] | Loss: 1.2121 | Accuracy: 57.45% (main.py:63)
+
+Epoch [30] | Loss: 1.2008 | Accuracy: 58.09% (main.py:63)
+
+Epoch [31] | Loss: 1.1971 | Accuracy: 57.93% (main.py:63)
+
+Epoch [32] | Loss: 1.1956 | Accuracy: 58.07% (main.py:63)
+
+Epoch [33] | Loss: 1.1910 | Accuracy: 58.13% (main.py:63)
+
+Epoch [34] | Loss: 1.1871 | Accuracy: 58.46% (main.py:63)
+
+Epoch [35] | Loss: 1.1854 | Accuracy: 58.14% (main.py:63)
+
+Epoch [36] | Loss: 1.1810 | Accuracy: 58.58% (main.py:63)
+
+Epoch [37] | Loss: 1.1856 | Accuracy: 58.53% (main.py:63)
+
+Epoch [38] | Loss: 1.1802 | Accuracy: 58.70% (main.py:63)
+
+Epoch [39] | Loss: 1.1726 | Accuracy: 58.78% (main.py:63)
+
+Epoch [40] | Loss: 1.1690 | Accuracy: 58.89% (main.py:63)
+
+Epoch [41] | Loss: 1.1690 | Accuracy: 58.93% (main.py:63)
+
+Epoch [42] | Loss: 1.1742 | Accuracy: 58.84% (main.py:63)
+
+Epoch [43] | Loss: 1.1624 | Accuracy: 59.17% (main.py:63)
+
+Epoch [44] | Loss: 1.1624 | Accuracy: 59.39% (main.py:63)
+
+Epoch [45] | Loss: 1.1578 | Accuracy: 59.25% (main.py:63)
+
+Epoch [46] | Loss: 1.1605 | Accuracy: 59.17% (main.py:63)
+
+Epoch [47] | Loss: 1.1572 | Accuracy: 59.40% (main.py:63)
+
+Epoch [48] | Loss: 1.1496 | Accuracy: 59.67% (main.py:63)
+
+Epoch [49] | Loss: 1.1483 | Accuracy: 59.46% (main.py:63)
+
+Epoch [50] | Loss: 1.1572 | Accuracy: 59.33% (main.py:63)
+
+Test Loss: 1.0970 | Accuracy: 62.65% | Precision: 0.6371 | Recall: 0.6265 | F1-score: 0.6220 (main.py:95)
+
+
+python main.py --dataset cifar10 --num_classes 10 --model LeNet --epoch
+s 50 --batch_size 64 --lr 0.015 --optimizer sgd --device cuda
+
+
+Epoch [1] | Loss: 1.8808 | Accuracy: 30.95% (main.py:63)
+
+Epoch [2] | Loss: 1.6488 | Accuracy: 40.37% (main.py:63)
+
+Epoch [3] | Loss: 1.5858 | Accuracy: 42.70% (main.py:63)
+
+Epoch [4] | Loss: 1.5445 | Accuracy: 44.89% (main.py:63)
+
+Epoch [5] | Loss: 1.5071 | Accuracy: 46.22% (main.py:63)
+
+Epoch [6] | Loss: 1.4816 | Accuracy: 47.02% (main.py:63)
+
+Epoch [7] | Loss: 1.4581 | Accuracy: 48.18% (main.py:63)
+
+Epoch [8] | Loss: 1.4389 | Accuracy: 48.90% (main.py:63)
+
+Epoch [9] | Loss: 1.4265 | Accuracy: 49.20% (main.py:63)
+
+Epoch [10] | Loss: 1.4231 | Accuracy: 49.15% (main.py:63)
+
+Epoch [11] | Loss: 1.4003 | Accuracy: 50.43% (main.py:63)
+
+Epoch [12] | Loss: 1.4048 | Accuracy: 50.12% (main.py:63)
+
+Epoch [13] | Loss: 1.3969 | Accuracy: 50.52% (main.py:63)
+
+Epoch [14] | Loss: 1.3830 | Accuracy: 51.22% (main.py:63)
+
+Epoch [15] | Loss: 1.3842 | Accuracy: 51.20% (main.py:63)
+
+Epoch [16] | Loss: 1.3773 | Accuracy: 51.33% (main.py:63)
+
+Epoch [17] | Loss: 1.3807 | Accuracy: 51.28% (main.py:63)
+
+Epoch [18] | Loss: 1.3775 | Accuracy: 51.74% (main.py:63)
+
+Epoch [19] | Loss: 1.3665 | Accuracy: 51.83% (main.py:63)
+
+Epoch [20] | Loss: 1.3716 | Accuracy: 51.74% (main.py:63)
+
+Epoch [21] | Loss: 1.3615 | Accuracy: 52.32% (main.py:63)
+
+Epoch [22] | Loss: 1.3585 | Accuracy: 52.12% (main.py:63)
+
+Epoch [23] | Loss: 1.3592 | Accuracy: 52.22% (main.py:63)
+
+Epoch [24] | Loss: 1.3555 | Accuracy: 52.51% (main.py:63)
+
+Epoch [25] | Loss: 1.3516 | Accuracy: 52.68% (main.py:63)
+
+Epoch [26] | Loss: 1.3509 | Accuracy: 52.42% (main.py:63)
+
+Epoch [27] | Loss: 1.3507 | Accuracy: 52.90% (main.py:63)
+
+Epoch [28] | Loss: 1.3520 | Accuracy: 52.75% (main.py:63)
+
+Epoch [29] | Loss: 1.3475 | Accuracy: 52.98% (main.py:63)
+
+Epoch [30] | Loss: 1.3366 | Accuracy: 53.01% (main.py:63)
+
+Epoch [31] | Loss: 1.3466 | Accuracy: 53.18% (main.py:63)
+
+Epoch [32] | Loss: 1.3422 | Accuracy: 52.99% (main.py:63)
+
+Epoch [33] | Loss: 1.3429 | Accuracy: 52.97% (main.py:63)
+
+Epoch [34] | Loss: 1.3419 | Accuracy: 53.19% (main.py:63)
+
+Epoch [35] | Loss: 1.3406 | Accuracy: 53.23% (main.py:63)
+
+Epoch [36] | Loss: 1.3376 | Accuracy: 53.04% (main.py:63)
+
+Epoch [37] | Loss: 1.3322 | Accuracy: 53.62% (main.py:63)
+
+Epoch [38] | Loss: 1.3284 | Accuracy: 53.61% (main.py:63)
+
+Epoch [39] | Loss: 1.3344 | Accuracy: 53.60% (main.py:63)
+
+Epoch [40] | Loss: 1.3250 | Accuracy: 53.90% (main.py:63)
+
+Epoch [41] | Loss: 1.3343 | Accuracy: 53.54% (main.py:63)
+
+Epoch [42] | Loss: 1.3293 | Accuracy: 53.65% (main.py:63)
+
+Epoch [43] | Loss: 1.3216 | Accuracy: 54.16% (main.py:63)
+
+Epoch [44] | Loss: 1.3285 | Accuracy: 53.85% (main.py:63)
+
+Epoch [45] | Loss: 1.3292 | Accuracy: 53.50% (main.py:63)
+
+Epoch [46] | Loss: 1.3326 | Accuracy: 53.60% (main.py:63)
+
+Epoch [47] | Loss: 1.3225 | Accuracy: 53.76% (main.py:63)
+
+Epoch [48] | Loss: 1.3233 | Accuracy: 53.98% (main.py:63)
+
+Epoch [49] | Loss: 1.3196 | Accuracy: 53.96% (main.py:63)
+
+Epoch [50] | Loss: 1.3335 | Accuracy: 53.47% (main.py:63)
+
+Test Loss: 1.1598 | Accuracy: 60.05% | Precision: 0.5976 | Recall: 0.6005 | F1-score: 0.5922 (main.py:95)
+
+--------------------------------
+
+python main.py --dataset cifar10 --num_classes 10 --model LeNet --epochs 50 --batch_size 64 --lr 0.035 --optimizer sgd --device cuda
+Epoch [1] | Loss: 1.9100 | Accuracy: 29.71% (main.py:63)
+
+Epoch [2] | Loss: 1.7561 | Accuracy: 36.10% (main.py:63)
+
+Epoch [3] | Loss: 1.7298 | Accuracy: 37.42% (main.py:63)
+
+Epoch [4] | Loss: 1.7049 | Accuracy: 38.61% (main.py:63)
+
+Epoch [5] | Loss: 1.6886 | Accuracy: 39.07% (main.py:63)
+
+Epoch [6] | Loss: 1.6857 | Accuracy: 39.46% (main.py:63)
+
+Epoch [7] | Loss: 1.6783 | Accuracy: 39.83% (main.py:63)
+
+Epoch [8] | Loss: 1.6644 | Accuracy: 40.33% (main.py:63)
+
+Epoch [9] | Loss: 1.6733 | Accuracy: 40.50% (main.py:63)
+
+Epoch [10] | Loss: 1.6713 | Accuracy: 40.19% (main.py:63)
+
+Epoch [11] | Loss: 1.6757 | Accuracy: 40.61% (main.py:63)
+
+Epoch [12] | Loss: 1.6813 | Accuracy: 40.21% (main.py:63)
+
+Epoch [13] | Loss: 1.6745 | Accuracy: 40.52% (main.py:63)
+
+Epoch [14] | Loss: 1.6749 | Accuracy: 40.58% (main.py:63)
+
+Epoch [15] | Loss: 1.6803 | Accuracy: 40.46% (main.py:63)
+
+Epoch [16] | Loss: 1.6789 | Accuracy: 40.36% (main.py:63)
+
+Epoch [17] | Loss: 1.6915 | Accuracy: 39.99% (main.py:63)
+
+Epoch [18] | Loss: 1.6789 | Accuracy: 40.45% (main.py:63)
+
+Epoch [19] | Loss: 1.6929 | Accuracy: 40.29% (main.py:63)
+
+Epoch [20] | Loss: 1.6825 | Accuracy: 40.38% (main.py:63)
+
+Epoch [21] | Loss: 1.6971 | Accuracy: 40.18% (main.py:63)
+
+Epoch [22] | Loss: 1.6842 | Accuracy: 40.56% (main.py:63)
+
+Epoch [23] | Loss: 1.6817 | Accuracy: 40.36% (main.py:63)
+
+Epoch [24] | Loss: 1.6808 | Accuracy: 40.78% (main.py:63)
+
+Epoch [25] | Loss: 1.6908 | Accuracy: 40.70% (main.py:63)
+
+Epoch [26] | Loss: 1.6842 | Accuracy: 41.08% (main.py:63)
+
+Epoch [27] | Loss: 1.6948 | Accuracy: 40.51% (main.py:63)
+
+Epoch [28] | Loss: 1.6848 | Accuracy: 40.76% (main.py:63)
+
+Epoch [29] | Loss: 1.6935 | Accuracy: 40.43% (main.py:63)
+
+Epoch [30] | Loss: 1.7179 | Accuracy: 39.50% (main.py:63)
+
+Epoch [31] | Loss: 1.7004 | Accuracy: 40.11% (main.py:63)
+
+Epoch [32] | Loss: 1.6964 | Accuracy: 40.60% (main.py:63)
+
+Epoch [33] | Loss: 1.6984 | Accuracy: 40.22% (main.py:63)
+
+Epoch [34] | Loss: 1.7133 | Accuracy: 39.74% (main.py:63)
+
+Epoch [35] | Loss: 1.6947 | Accuracy: 40.72% (main.py:63)
+
+Epoch [36] | Loss: 1.6924 | Accuracy: 40.87% (main.py:63)
+
+Epoch [37] | Loss: 1.6914 | Accuracy: 40.36% (main.py:63)
+
+Epoch [38] | Loss: 1.7031 | Accuracy: 40.11% (main.py:63)
+
+Epoch [39] | Loss: 1.6870 | Accuracy: 40.77% (main.py:63)
+
+Epoch [40] | Loss: 1.6879 | Accuracy: 40.86% (main.py:63)
+
+Epoch [41] | Loss: 1.6993 | Accuracy: 40.48% (main.py:63)
+
+Epoch [42] | Loss: 1.6959 | Accuracy: 40.39% (main.py:63)
+
+Epoch [43] | Loss: 1.6968 | Accuracy: 40.60% (main.py:63)
+
+Epoch [44] | Loss: 1.7001 | Accuracy: 40.52% (main.py:63)
+
+Epoch [45] | Loss: 1.6865 | Accuracy: 40.96% (main.py:63)
+
+Epoch [46] | Loss: 1.7068 | Accuracy: 40.42% (main.py:63)
+
+Epoch [47] | Loss: 1.7140 | Accuracy: 39.79% (main.py:63)
+
+Epoch [48] | Loss: 1.7115 | Accuracy: 40.12% (main.py:63)
+
+Epoch [49] | Loss: 1.7062 | Accuracy: 40.28% (main.py:63)
+
+Epoch [50] | Loss: 1.7073 | Accuracy: 40.34% (main.py:63)
+
+Test Loss: 1.5386 | Accuracy: 46.29% | Precision: 0.4590 | Recall: 0.4629 | F1-score: 0.4497 (main.py:95)
+
+------------------------------
+
+python main.py --dataset cifar10 --num_classes 10 --model LeNet --epochs 50 --batch_size 64 --lr 0.035 --optimizer adam --device cuda
+Epoch [1] | Loss: 2.3323 | Accuracy: 9.84% (main.py:63)
+
+Epoch [2] | Loss: 2.3059 | Accuracy: 9.84% (main.py:63)
+
+Epoch [3] | Loss: 2.3059 | Accuracy: 9.82% (main.py:63)
+
+Epoch [4] | Loss: 2.3059 | Accuracy: 9.83% (main.py:63)
+
+Epoch [5] | Loss: 2.3060 | Accuracy: 9.82% (main.py:63)
+
+Epoch [6] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [7] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [8] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [9] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [10] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [11] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [12] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [13] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [14] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [15] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [16] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [17] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [18] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [19] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [20] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [21] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [22] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [23] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [24] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [25] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [26] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [27] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [28] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [29] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [30] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [31] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [32] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [33] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [34] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [35] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [36] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [37] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [38] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [39] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [40] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [41] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [42] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [43] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [44] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [45] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [46] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [47] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [48] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [49] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Epoch [50] | Loss: 2.3060 | Accuracy: 9.83% (main.py:63)
+
+Test Loss: 2.3057 | Accuracy: 10.00% | Precision: 0.0100 | Recall: 0.1000 | F1-score: 0.0182 (main.py:95)
+
+
+-------------------------------
+
+python main.py --dataset cifar10 --num_classes 10 --model resnet20 --epochs 50 --batch_size 64 --lr 0.005 --optimizer sgd --device cuda
+Epoch [1] | Loss: 1.8091 | Accuracy: 33.40% (main.py:63)
+
+Epoch [2] | Loss: 1.5371 | Accuracy: 44.11% (main.py:63)
+
+Epoch [3] | Loss: 1.4094 | Accuracy: 49.14% (main.py:63)
+
+Epoch [4] | Loss: 1.3189 | Accuracy: 52.75% (main.py:63)
+
+Epoch [5] | Loss: 1.2381 | Accuracy: 55.75% (main.py:63)
+
+Epoch [6] | Loss: 1.1902 | Accuracy: 57.56% (main.py:63)
+
+Epoch [7] | Loss: 1.1414 | Accuracy: 59.40% (main.py:63)
+
+Epoch [8] | Loss: 1.1019 | Accuracy: 60.79% (main.py:63)
+
+Epoch [9] | Loss: 1.0665 | Accuracy: 62.35% (main.py:63)
+
+Epoch [10] | Loss: 1.0318 | Accuracy: 63.48% (main.py:63)
+
+Epoch [11] | Loss: 1.0105 | Accuracy: 64.33% (main.py:63)
+
+Epoch [12] | Loss: 0.9719 | Accuracy: 65.90% (main.py:63)
+
+Epoch [13] | Loss: 0.9544 | Accuracy: 66.54% (main.py:63)
+
+Epoch [14] | Loss: 0.9273 | Accuracy: 67.57% (main.py:63)
+
+Epoch [15] | Loss: 0.9109 | Accuracy: 67.94% (main.py:63)
+
+Epoch [16] | Loss: 0.8933 | Accuracy: 68.56% (main.py:63)
+
+Epoch [17] | Loss: 0.8802 | Accuracy: 69.07% (main.py:63)
+
+Epoch [18] | Loss: 0.8620 | Accuracy: 70.05% (main.py:63)
+
+Epoch [19] | Loss: 0.8457 | Accuracy: 70.64% (main.py:63)
+
+Epoch [20] | Loss: 0.8327 | Accuracy: 70.78% (main.py:63)
+
+Epoch [21] | Loss: 0.8193 | Accuracy: 71.20% (main.py:63)
+
+Epoch [22] | Loss: 0.8100 | Accuracy: 71.70% (main.py:63)
+
+Epoch [23] | Loss: 0.7927 | Accuracy: 72.14% (main.py:63)
+
+Epoch [24] | Loss: 0.7804 | Accuracy: 72.94% (main.py:63)
+
+Epoch [25] | Loss: 0.7763 | Accuracy: 72.85% (main.py:63)
+
+Epoch [26] | Loss: 0.7635 | Accuracy: 73.43% (main.py:63)
+
+Epoch [27] | Loss: 0.7549 | Accuracy: 73.48% (main.py:63)
+
+Epoch [28] | Loss: 0.7472 | Accuracy: 73.74% (main.py:63)
+
+Epoch [29] | Loss: 0.7350 | Accuracy: 74.29% (main.py:63)
+
+Epoch [30] | Loss: 0.7270 | Accuracy: 74.74% (main.py:63)
+
+Epoch [31] | Loss: 0.7182 | Accuracy: 74.84% (main.py:63)
+
+Epoch [32] | Loss: 0.7117 | Accuracy: 75.21% (main.py:63)
+
+Epoch [33] | Loss: 0.7052 | Accuracy: 75.35% (main.py:63)
+
+Epoch [34] | Loss: 0.6991 | Accuracy: 75.59% (main.py:63)
+
+Epoch [35] | Loss: 0.6946 | Accuracy: 75.73% (main.py:63)
+
+Epoch [36] | Loss: 0.6866 | Accuracy: 76.03% (main.py:63)
+
+Epoch [37] | Loss: 0.6771 | Accuracy: 76.37% (main.py:63)
+
+Epoch [38] | Loss: 0.6713 | Accuracy: 76.66% (main.py:63)
+
+Epoch [39] | Loss: 0.6662 | Accuracy: 76.90% (main.py:63)
+
+Epoch [40] | Loss: 0.6597 | Accuracy: 76.78% (main.py:63)
+
+Epoch [41] | Loss: 0.6520 | Accuracy: 77.48% (main.py:63)
+
+Epoch [42] | Loss: 0.6520 | Accuracy: 77.20% (main.py:63)
+
+Epoch [43] | Loss: 0.6459 | Accuracy: 77.35% (main.py:63)
+
+Epoch [44] | Loss: 0.6372 | Accuracy: 77.77% (main.py:63)
+
+Epoch [45] | Loss: 0.6356 | Accuracy: 77.83% (main.py:63)
+
+Epoch [46] | Loss: 0.6279 | Accuracy: 78.14% (main.py:63)
+
+Epoch [47] | Loss: 0.6231 | Accuracy: 78.19% (main.py:63)
+
+Epoch [48] | Loss: 0.6251 | Accuracy: 78.17% (main.py:63)
+
+Epoch [49] | Loss: 0.6172 | Accuracy: 78.43% (main.py:63)
+
+Epoch [50] | Loss: 0.6116 | Accuracy: 78.78% (main.py:63)
+
+Test Loss: 0.4902 | Accuracy: 83.52% | Precision: 0.8359 | Recall: 0.8352 | F1-score: 0.8337 (main.py:95)

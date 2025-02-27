@@ -131,6 +131,12 @@ def get_datasetCML(data_use, num_class, batch_size):
     return trainloader, testloader
 
 def data_semi_learning(data_use, num_class, batch_size, labeled_classes=[0, 1, 2, 3, 4]):
+    """
+    Input data_use, num_classes, batch_size, labeled_classes selected to create label dataset and unlabel dataset
+    :param: data_use: input name of dataset
+    :param: 
+    """
+
     if data_use == 'cifar10':
         path = "D:\\2025\\Projects\\Federated Learning with the raw meat in the dish\\data\\images"
         transform_train = transforms.Compose([
@@ -171,18 +177,20 @@ def data_semi_learning(data_use, num_class, batch_size, labeled_classes=[0, 1, 2
         trainset = datasets.CIFAR100(root=path, train=True, download=True, transform=transform_train)
         testset = datasets.CIFAR100(root=path, train=False, download=True, transform=transform_test)
 
-    # Chuyển targets sang NumPy để xử lý nhanh hơn
-    targets = np.array(trainset.targets)
+    # len(trainset) = 50000
+    targets = (trainset.targets) # targets = label [0,1,2,3,4,5,6,7,8,9]
 
-    # Lọc chỉ mục nhanh bằng NumPy
     labeled_indices = np.where(np.isin(targets, labeled_classes))[0]
     unlabeled_indices = np.where(~np.isin(targets, labeled_classes))[0]
 
-    # Shuffle để tránh dữ liệu có nhãn tập trung
     np.random.shuffle(labeled_indices)
     np.random.shuffle(unlabeled_indices)
 
-    # Chia tập dữ liệu
+    """
+    labeled_set = [0,1,2,3,4]
+    unlabeled_indices = [5,6,7,8,9]
+    return dataset
+    """
     labeled_set = Subset(trainset, labeled_indices)
     unlabeled_set = Subset(trainset, unlabeled_indices)
 

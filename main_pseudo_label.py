@@ -63,90 +63,45 @@ def train_one_epoch(model, trainloader, optimizer, criterion, device, epoch):
 
     print(f"Epoch [{epoch+1}] | Loss: {epoch_loss:.4f} | Accuracy: {accuracy:.2f}%")
 
-class PseudoLabelDataset(torch.utils.data.Dataset):
-    def __init__(self, pseudo_data):
-        self.pseudo_data = pseudo_data
-
-    def __len__(self):
-        return len(self.pseudo_data)
-
-    def __getitem__(self, idx):
-        inputs, labels = self.pseudo_data[idx]
-        return inputs, labels
-
-
-def generate_pseudo_labels(model, unlabel_loader, device, confidence_threshold=0.9):
-    """Generate Pseudo Labels."""
-    model.eval()
-    pseudo_inputs, pseudo_labels = [], []
-
-    with torch.no_grad():
-        for inputs, _ in tqdm(unlabel_loader, desc="Generating Pseudo-Labels"):
-            inputs = inputs.to(device)
-            outputs = model(inputs)
-            probs = F.softmax(outputs, dim=1)
-            max_probs, pseudo_preds = torch.max(probs, dim=1)
-
-            high_confidence_mask = max_probs > confidence_threshold
-            selected_inputs = inputs[high_confidence_mask].cpu()
-            selected_labels = pseudo_preds[high_confidence_mask].cpu()
-
-            if len(selected_inputs) > 0:
-                pseudo_inputs.append(selected_inputs)
-                pseudo_labels.append(selected_labels)
-
-    if len(pseudo_inputs) > 0:
-        pseudo_inputs = torch.cat(pseudo_inputs, dim=0)
-        pseudo_labels = torch.cat(pseudo_labels, dim=0)
-        return TensorDataset(pseudo_inputs, pseudo_labels)
-    else:
-        return None  # Trả về None nếu không có pseudo-label nào
 
 def train_with_pseudo_labels(args):
+
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
     model_cls = MODEL_DICT.get(args.model, None)
     if model_cls is None:
         raise ValueError(f"Model '{args.model}' is not supported!")
 
-    model = model_cls(num_classes=10).to(device)
+    model = model_cls(num_classes=args.num_classes).to(device)
 
-    # Chia dữ liệu thành tập có nhãn (5 lớp đầu) và tập không nhãn (5 lớp còn lại)
     trainset, unlabel_trainset = data_semi_learning(args.dataset, batch_size=args.batch_size, num_class=10, labeled_classes=[0,1,2,3,4])
 
     trainloader = DataLoader(trainset, batch_size=args.batch_size, shuffle=True, num_workers=2)
-    unlabel_loader = DataLoader(unlabel_trainset, batch_size=args.batch_size, shuffle=True, num_workers=2)
-
     optimizer = optim.Adam(model.parameters(), lr=args.lr) if args.optimizer == "adam" else optim.SGD(model.parameters(), lr=args.lr, momentum=0.9)
     criterion = nn.CrossEntropyLoss()
-
-    # 1. Train với dữ liệu có nhãn
     print("==> Initial training with labeled dataset...")
     for epoch in range(args.epochs):
         train_one_epoch(model, trainloader, optimizer, criterion, device, epoch)
 
-    # 2. Sinh pseudo-labels từ tập dữ liệu không nhãn
     print("==> Generating pseudo labels from unlabeled data...")
-    pseudo_dataset = PseudoLabelDataset(pseudo_dataset)
-    pseudo_loader = torch.utils.data.DataLoader(pseudo_dataset, batch_size=args.batch_size, shuffle=True)
-
+    unlabel_loader = DataLoader(unlabel_trainset, batch_size=args.batch_size, shuffle=True, num_workers=2)
     pseudo_dataset = generate_pseudo_labels(model, unlabel_loader, device)
-    print("\n Nguyen Thanh Luan Check: \n")
-    print_dataset_info(pseudo_dataset)
 
     if pseudo_dataset is not None:
         print(f"Number of samples with pseudo labels: {len(pseudo_dataset)}")
 
-        # 3. Tạo DataLoader mới kết hợp cả tập có nhãn và pseudo-label
-        pseudo_loader = DataLoader(pseudo_dataset, batch_size=args.batch_size, shuffle=True, num_workers=2)
         combined_dataset = ConcatDataset([trainset, pseudo_dataset])
         final_train_loader = DataLoader(combined_dataset, batch_size=args.batch_size, shuffle=True, num_workers=2)
 
-        # 4. Retrain với tập mở rộng
+        print(f"Type of pseudo_dataset: {type(combined_dataset)}")
+        if isinstance(combined_dataset, torch.utils.data.Dataset):
+            print(f"Sample from pseudo_dataset: {combined_dataset[0]}")
+
+
         print("==> Retrain with extended data (including pseudo labels)...")
         for epoch in range(args.epochs):
             train_one_epoch(model, final_train_loader, optimizer, criterion, device, epoch)
 
-    torch.save(model.state_dict(), f"{args.model}_{args.dataset}_pseudo_final.pth")
+    torch.save(model.state_dict(), f"model_save/{args.model}_{args.dataset}_pseudo_final.pth")
     print(f"Model saved at {args.model}_{args.dataset}_pseudo_final.pth")
 
 

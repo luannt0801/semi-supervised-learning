@@ -16,3 +16,4 @@ Epoch [8] | Loss: 2.4928 | Accuracy: 35.17%
 Epoch [9] | Loss: 2.3868 | Accuracy: 37.31%
 Epoch [10] | Loss: 2.2919 | Accuracy: 39.29%
 ```
+

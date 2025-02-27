@@ -1,5 +1,6 @@
 import argparse
 import torch
+import numpy as np
 import torch.optim as optim
 import torch.nn as nn
 from tqdm import tqdm
@@ -19,6 +20,14 @@ from src.model.model import (
 )
 from src.utils import *
 
+# import for clustering
+from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
+from sklearn.mixture import GaussianMixture
+from sklearn.metrics.pairwise import cosine_similarity
+import hdbscan
+import matplotlib.pyplot as plt
+from sklearn.manifold import TSNE
+
 MODEL_DICT = {
     "LSTMModel": LSTMModel,
     "LeNet": LeNet,
@@ -31,6 +40,53 @@ MODEL_DICT = {
     "resnet1202": resnet1202,
 }
 
+def cluster_adaptive(embeddings, labels, method="kmeans", num_clusters=10):
+    """
+    Perform clustering on embeddings using different methods and visualize with t-SNE.
+    
+    Args:
+        embeddings: ndarray of shape (n_samples, n_features)
+        labels: ndarray of shape (n_samples,)
+        method: str, clustering method ("kmeans", "gmm", "dbscan", "hdbscan", "cosine")
+        num_clusters: int, number of clusters for applicable methods
+    """
+    
+    if method == "kmeans":
+        cluster_model = KMeans(n_clusters=num_clusters, random_state=42)
+        clusters = cluster_model.fit_predict(embeddings)
+
+    elif method == "gmm":
+        cluster_model = GaussianMixture(n_components=num_clusters, random_state=42)
+        clusters = cluster_model.fit_predict(embeddings)
+
+    elif method == "dbscan":
+        cluster_model = DBSCAN(eps=0.5, min_samples=5)
+        clusters = cluster_model.fit_predict(embeddings)
+
+    elif method == "hdbscan":
+        cluster_model = hdbscan.HDBSCAN(min_cluster_size=10)
+        clusters = cluster_model.fit_predict(embeddings)
+
+    elif method == "cosine":
+        similarity_matrix = cosine_similarity(embeddings)
+        cluster_model = AgglomerativeClustering(n_clusters=num_clusters, affinity="precomputed", linkage="average")
+        clusters = cluster_model.fit_predict(1 - similarity_matrix)
+
+    else:
+        raise ValueError("Unsupported clustering method. Choose from 'kmeans', 'gmm', 'dbscan', 'hdbscan', 'cosine'.")
+
+    # Giảm chiều dữ liệu bằng t-SNE để vẽ đồ thị
+    tsne = TSNE(n_components=2, perplexity=30, random_state=42)
+    reduced_data = tsne.fit_transform(embeddings)
+
+    plt.figure(figsize=(8, 6))
+    scatter = plt.scatter(reduced_data[:, 0], reduced_data[:, 1], c=clusters, cmap='viridis', alpha=0.6)
+    plt.colorbar(scatter)
+    plt.title(f"t-SNE Visualization of Feature Prototypes ({method})")
+    plt.show()
+
+    return clusters
+
 def train_one_epoch(model, trainloader, optimizer, criterion, device, epoch):
     """
     Train one epoch for any given model on CIFAR-10 or CIFAR-100.
@@ -39,13 +95,16 @@ def train_one_epoch(model, trainloader, optimizer, criterion, device, epoch):
     running_loss = 0.0
     correct, total = 0, 0
 
+    embeddings = []
+    labels_list = []
+
     progress_bar = tqdm(trainloader, desc=f"Epoch {epoch+1}", leave=True)
 
     for idx, (inputs, labels) in enumerate(progress_bar):
         inputs, labels = inputs.to(device), labels.to(device)
 
         optimizer.zero_grad()
-        outputs, _ = model(inputs)
+        outputs, features = model(inputs)
 
         loss = criterion(outputs, labels)
         loss.backward()
@@ -57,10 +116,15 @@ def train_one_epoch(model, trainloader, optimizer, criterion, device, epoch):
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
 
+        embeddings.append(features.cpu().detach().numpy())
+        labels_list.append(labels.cpu().detach().numpy())
+
     epoch_loss = running_loss / len(trainloader)
     accuracy = 100 * correct / total
 
     logger.info(f"Epoch [{epoch+1}] | Loss: {epoch_loss:.4f} | Accuracy: {accuracy:.2f}%")
+
+    return np.concatenate(embeddings, axis=0), np.concatenate(labels_list, axis=0)
 
 def evaluate(model, testloader, criterion, device):
     """
