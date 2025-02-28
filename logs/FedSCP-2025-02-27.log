@@ -1,0 +1,200 @@
+
+Epoch [1] | Loss: 2.1884 | Accuracy: 17.68% (1010354692.py:30)
+
+Epoch [2] | Loss: 1.7453 | Accuracy: 22.12% (1010354692.py:30)
+
+Epoch [3] | Loss: 1.5659 | Accuracy: 31.64% (1010354692.py:30)
+
+Epoch [4] | Loss: 1.5022 | Accuracy: 34.52% (1010354692.py:30)
+
+Epoch [5] | Loss: 1.4597 | Accuracy: 36.18% (1010354692.py:30)
+
+Epoch [6] | Loss: 1.4246 | Accuracy: 38.35% (1010354692.py:30)
+
+Epoch [7] | Loss: 1.3932 | Accuracy: 39.99% (1010354692.py:30)
+
+Epoch [8] | Loss: 1.3709 | Accuracy: 41.70% (1010354692.py:30)
+
+Epoch [9] | Loss: 1.3540 | Accuracy: 42.43% (1010354692.py:30)
+
+Epoch [10] | Loss: 1.3373 | Accuracy: 43.40% (1010354692.py:30)
+
+Epoch [11] | Loss: 1.3218 | Accuracy: 44.02% (1010354692.py:30)
+
+Epoch [12] | Loss: 1.3125 | Accuracy: 44.92% (1010354692.py:30)
+
+Epoch [13] | Loss: 1.3022 | Accuracy: 45.76% (1010354692.py:30)
+
+Epoch [14] | Loss: 1.2903 | Accuracy: 46.55% (1010354692.py:30)
+
+Epoch [15] | Loss: 1.2847 | Accuracy: 46.74% (1010354692.py:30)
+
+Epoch [16] | Loss: 1.2732 | Accuracy: 47.47% (1010354692.py:30)
+
+Epoch [17] | Loss: 1.2628 | Accuracy: 48.12% (1010354692.py:30)
+
+Epoch [18] | Loss: 1.2554 | Accuracy: 48.33% (1010354692.py:30)
+
+Epoch [19] | Loss: 1.2480 | Accuracy: 48.70% (1010354692.py:30)
+
+Epoch [20] | Loss: 1.2389 | Accuracy: 48.82% (1010354692.py:30)
+
+Epoch [21] | Loss: 1.2335 | Accuracy: 49.57% (1010354692.py:30)
+
+Epoch [22] | Loss: 1.2294 | Accuracy: 49.40% (1010354692.py:30)
+
+Epoch [23] | Loss: 1.2217 | Accuracy: 49.77% (1010354692.py:30)
+
+Epoch [24] | Loss: 1.2148 | Accuracy: 50.13% (1010354692.py:30)
+
+Epoch [25] | Loss: 1.2097 | Accuracy: 50.54% (1010354692.py:30)
+
+Epoch [26] | Loss: 1.2030 | Accuracy: 50.83% (1010354692.py:30)
+
+Epoch [27] | Loss: 1.1950 | Accuracy: 50.98% (1010354692.py:30)
+
+Epoch [28] | Loss: 1.1929 | Accuracy: 51.24% (1010354692.py:30)
+
+Epoch [29] | Loss: 1.1898 | Accuracy: 51.61% (1010354692.py:30)
+
+Epoch [30] | Loss: 1.1812 | Accuracy: 51.96% (1010354692.py:30)
+
+Epoch [31] | Loss: 1.1848 | Accuracy: 51.50% (1010354692.py:30)
+
+Epoch [32] | Loss: 1.1751 | Accuracy: 52.00% (1010354692.py:30)
+
+Epoch [33] | Loss: 1.1697 | Accuracy: 52.33% (1010354692.py:30)
+
+Epoch [34] | Loss: 1.1617 | Accuracy: 52.93% (1010354692.py:30)
+
+Epoch [35] | Loss: 1.1631 | Accuracy: 52.53% (1010354692.py:30)
+
+Epoch [36] | Loss: 1.1622 | Accuracy: 52.62% (1010354692.py:30)
+
+Epoch [37] | Loss: 1.1566 | Accuracy: 52.74% (1010354692.py:30)
+
+Epoch [38] | Loss: 1.1479 | Accuracy: 53.41% (1010354692.py:30)
+
+Epoch [39] | Loss: 1.1480 | Accuracy: 53.06% (1010354692.py:30)
+
+Epoch [40] | Loss: 1.1480 | Accuracy: 53.09% (1010354692.py:30)
+
+Epoch [41] | Loss: 1.1469 | Accuracy: 53.03% (1010354692.py:30)
+
+Epoch [42] | Loss: 1.1411 | Accuracy: 53.60% (1010354692.py:30)
+
+Epoch [43] | Loss: 1.1380 | Accuracy: 53.65% (1010354692.py:30)
+
+Epoch [44] | Loss: 1.1348 | Accuracy: 53.90% (1010354692.py:30)
+
+Epoch [45] | Loss: 1.1333 | Accuracy: 54.17% (1010354692.py:30)
+
+Epoch [46] | Loss: 1.1253 | Accuracy: 54.07% (1010354692.py:30)
+
+Epoch [47] | Loss: 1.1309 | Accuracy: 54.13% (1010354692.py:30)
+
+Epoch [48] | Loss: 1.1241 | Accuracy: 54.52% (1010354692.py:30)
+
+Epoch [49] | Loss: 1.1200 | Accuracy: 54.15% (1010354692.py:30)
+
+Epoch [50] | Loss: 1.1205 | Accuracy: 54.51% (1010354692.py:30)
+
+Epoch [1] | Loss: 2.1591 | Accuracy: 24.49% (12803263.py:30)
+
+Epoch [2] | Loss: 1.6685 | Accuracy: 28.82% (12803263.py:30)
+
+Epoch [3] | Loss: 1.5446 | Accuracy: 34.12% (12803263.py:30)
+
+Epoch [4] | Loss: 1.5088 | Accuracy: 36.72% (12803263.py:30)
+
+Epoch [5] | Loss: 1.4827 | Accuracy: 38.14% (12803263.py:30)
+
+Epoch [6] | Loss: 1.4577 | Accuracy: 39.55% (12803263.py:30)
+
+Epoch [7] | Loss: 1.4326 | Accuracy: 40.44% (12803263.py:30)
+
+Epoch [8] | Loss: 1.4157 | Accuracy: 41.42% (12803263.py:30)
+
+Epoch [9] | Loss: 1.3986 | Accuracy: 42.03% (12803263.py:30)
+
+Epoch [10] | Loss: 1.3899 | Accuracy: 42.18% (12803263.py:30)
+
+Epoch [11] | Loss: 1.3779 | Accuracy: 42.82% (12803263.py:30)
+
+Epoch [12] | Loss: 1.3697 | Accuracy: 43.24% (12803263.py:30)
+
+Epoch [13] | Loss: 1.3609 | Accuracy: 43.92% (12803263.py:30)
+
+Epoch [14] | Loss: 1.3542 | Accuracy: 44.33% (12803263.py:30)
+
+Epoch [15] | Loss: 1.3434 | Accuracy: 44.72% (12803263.py:30)
+
+Epoch [16] | Loss: 1.3366 | Accuracy: 44.54% (12803263.py:30)
+
+Epoch [17] | Loss: 1.3325 | Accuracy: 45.22% (12803263.py:30)
+
+Epoch [18] | Loss: 1.3269 | Accuracy: 45.38% (12803263.py:30)
+
+Epoch [19] | Loss: 1.3219 | Accuracy: 45.68% (12803263.py:30)
+
+Epoch [20] | Loss: 1.3110 | Accuracy: 46.14% (12803263.py:30)
+
+Epoch [21] | Loss: 1.3056 | Accuracy: 46.42% (12803263.py:30)
+
+Epoch [22] | Loss: 1.2969 | Accuracy: 46.81% (12803263.py:30)
+
+Epoch [23] | Loss: 1.2932 | Accuracy: 47.28% (12803263.py:30)
+
+Epoch [24] | Loss: 1.2890 | Accuracy: 46.88% (12803263.py:30)
+
+Epoch [25] | Loss: 1.2795 | Accuracy: 47.71% (12803263.py:30)
+
+Epoch [26] | Loss: 1.2749 | Accuracy: 47.71% (12803263.py:30)
+
+Epoch [27] | Loss: 1.2734 | Accuracy: 47.70% (12803263.py:30)
+
+Epoch [28] | Loss: 1.2655 | Accuracy: 48.12% (12803263.py:30)
+
+Epoch [29] | Loss: 1.2576 | Accuracy: 48.92% (12803263.py:30)
+
+Epoch [30] | Loss: 1.2538 | Accuracy: 48.81% (12803263.py:30)
+
+Epoch [31] | Loss: 1.2482 | Accuracy: 48.94% (12803263.py:30)
+
+Epoch [32] | Loss: 1.2456 | Accuracy: 49.60% (12803263.py:30)
+
+Epoch [33] | Loss: 1.2425 | Accuracy: 49.09% (12803263.py:30)
+
+Epoch [34] | Loss: 1.2324 | Accuracy: 50.01% (12803263.py:30)
+
+Epoch [35] | Loss: 1.2286 | Accuracy: 50.04% (12803263.py:30)
+
+Epoch [36] | Loss: 1.2200 | Accuracy: 50.76% (12803263.py:30)
+
+Epoch [37] | Loss: 1.2150 | Accuracy: 50.71% (12803263.py:30)
+
+Epoch [38] | Loss: 1.2111 | Accuracy: 50.93% (12803263.py:30)
+
+Epoch [39] | Loss: 1.2083 | Accuracy: 50.85% (12803263.py:30)
+
+Epoch [40] | Loss: 1.2064 | Accuracy: 50.80% (12803263.py:30)
+
+Epoch [41] | Loss: 1.2001 | Accuracy: 51.36% (12803263.py:30)
+
+Epoch [42] | Loss: 1.1992 | Accuracy: 51.55% (12803263.py:30)
+
+Epoch [43] | Loss: 1.1987 | Accuracy: 51.09% (12803263.py:30)
+
+Epoch [44] | Loss: 1.1923 | Accuracy: 51.35% (12803263.py:30)
+
+Epoch [45] | Loss: 1.1841 | Accuracy: 51.68% (12803263.py:30)
+
+Epoch [46] | Loss: 1.1859 | Accuracy: 51.78% (12803263.py:30)
+
+Epoch [47] | Loss: 1.1768 | Accuracy: 52.37% (12803263.py:30)
+
+Epoch [48] | Loss: 1.1784 | Accuracy: 51.97% (12803263.py:30)
+
+Epoch [49] | Loss: 1.1775 | Accuracy: 52.07% (12803263.py:30)
+
+Epoch [50] | Loss: 1.1688 | Accuracy: 52.35% (12803263.py:30)

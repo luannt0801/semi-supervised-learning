@@ -87,9 +87,8 @@ class LeNet(nn.Module):
         return x, proto
 
 class LeNet_5(nn.Module):
-    
     def __init__(self, in_features=3, num_classes=10):
-        super(LeNet, self).__init__()
+        super(LeNet_5, self).__init__()
         
         self.conv_block = nn.Sequential( nn.Conv2d(in_channels=in_features,
                                                    out_channels=6,
@@ -110,7 +109,7 @@ class LeNet_5(nn.Module):
                                            nn.Tanh(),
                                            nn.Linear(120,84),
                                            nn.Tanh(),
-                                           nn.Linear(84,10)
+                                           nn.Linear(84,num_classes)
                                          )
         
     def forward(self, x):
